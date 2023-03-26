@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="views.StudentView"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="499.0" prefWidth="464.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.groupApp.controllers.StudentController">
+   <children>
+      <Button fx:id="btnAddNewStudent" layoutX="35.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnAddNewStudentOnAction" style="-fx-background-color: green;" text="+NEW STUDENT" textFill="WHITE" />
+      <VBox layoutX="20.0" layoutY="83.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="83.0">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="ID:" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtId" editable="false" maxWidth="1.7976931348623157E308" promptText="STUDENT ID AUTO GENERATE" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="Name:" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtName" disable="true" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="194.0" promptText="Kasun Lakmal" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="Address" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtAddress" disable="true" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="206.0" promptText="Panadura" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="112.0" layoutY="210.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnSave" disable="true" mnemonicParsing="false" onAction="#btnSaveOnAction" prefWidth="70.0" style="-fx-background-color: blue;" text="SAVE" textFill="WHITE" />
+            <Button fx:id="btnDelete" disable="true" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="70.0" style="-fx-background-color: red;" text="DELETE" textFill="WHITE" />
+         </children>
+      </HBox>
+      <TableView fx:id="tblStudents" layoutX="35.0" layoutY="257.0" onKeyReleased="#tblStudentsOnKeyReleased" prefHeight="218.0" prefWidth="408.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="ID" />
+            <TableColumn prefWidth="132.0" text="NAME" />
+            <TableColumn prefWidth="107.0" text="ADDRESS" />
+         </columns>
+      </TableView>
+   </children>
 </AnchorPane>
