@@ -30,7 +30,7 @@ public class DBConnection {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR,"failed to connect with database try again ").showAndWait();
+            new Alert(Alert.AlertType.ERROR,"failed to connect with database try again... ").showAndWait();
             throw new RuntimeException(e);
         }
     }
