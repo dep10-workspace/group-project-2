@@ -1,9 +1,6 @@
 package lk.ijse.dep10.groupApp.db;
 
-import com.mysql.cj.util.DnsSrv;
 import javafx.scene.control.Alert;
-
-import java.awt.dnd.DragGestureEvent;
 import java.io.*;
 import java.sql.*;
 import java.util.Properties;
