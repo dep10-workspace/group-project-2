@@ -25,7 +25,7 @@ public class DBConnection {
             String database = properties.getProperty("dep10.database", "dep10_git");
             String user = properties.getProperty("dep10.user", "root");
             String password = properties.getProperty("dep10.password", "");
-            String sql = String.format("jdbc:mysql://%s:%s/%s", host,port,database);
+            String sql = String.format("jdbc:mysql://%s:%s/%s?createDatabaseIfNotExist=true&allowMultiQueries=true", host,port,database);
             connection= DriverManager.getConnection(sql,user,password);
 
         } catch (SQLException e) {

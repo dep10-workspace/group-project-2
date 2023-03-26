@@ -32,6 +32,16 @@ public class DashBoardController {
 
     @FXML
     void btnEmployeeOnAction(ActionEvent event) {
+        Stage stage =(Stage)btnEmployee.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(new FXMLLoader(getClass().getResource("/views/EmployeeView.fxml")).load()));
+            stage.setTitle("Manage Employee");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR,"Failed to load Employee view.. please try again").showAndWait();
+            throw new RuntimeException(e);
+        }
 
     }
 
