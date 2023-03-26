@@ -1,9 +1,6 @@
 package lk.ijse.dep10.groupApp.db;
 
-import com.mysql.cj.util.DnsSrv;
 import javafx.scene.control.Alert;
-
-import java.awt.dnd.DragGestureEvent;
 import java.io.*;
 import java.sql.*;
 import java.util.Properties;
@@ -33,7 +30,7 @@ public class DBConnection {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR,"failed to connect with database try again ").showAndWait();
+            new Alert(Alert.AlertType.ERROR,"failed to connect with database try again... ").showAndWait();
             throw new RuntimeException(e);
         }
     }
