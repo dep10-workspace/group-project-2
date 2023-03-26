@@ -90,6 +90,5 @@ public class AppInitializer extends Application {
             new Alert(Alert.AlertType.ERROR,"schema.sql file is empty... please contact the technical team").showAndWait();
             throw new RuntimeException(e);
         }
-
     }
 }
