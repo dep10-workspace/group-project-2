@@ -57,7 +57,7 @@ public class AppInitializer extends Application {
             while (rst.next()) {
                 tableNameList.add(rst.getString(1));
             }
-            boolean tableAllExist = tableNameList.contains(Set.of("Students,Customers,Teachers,Employees"));
+            boolean tableAllExist = tableNameList.contains(Set.of("Students,Customers,Teachers,Employee"));
             if (!tableAllExist) {
                 System.out.println("Tables are about to auto generate through the scheme.sql");
                 stm.execute(schemaRead());
