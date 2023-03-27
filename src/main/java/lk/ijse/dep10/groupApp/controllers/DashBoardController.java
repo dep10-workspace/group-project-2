@@ -61,7 +61,12 @@ public class DashBoardController {
     }
 
     @FXML
-    void btnTeacherOnAction(ActionEvent event) {
+    void btnTeacherOnAction(ActionEvent event) throws IOException {
+        Stage primaryStage=new Stage();
+        primaryStage.setScene(new Scene(new FXMLLoader(getClass().getResource("/views/TeachersView.fxml")).load()));
+        primaryStage.centerOnScreen();
+        primaryStage.show();
+        primaryStage.setTitle("Manage Teachers");
 
     }
 

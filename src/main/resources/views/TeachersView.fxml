@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.groupApp.controllers.TeacherController">
+   <children>
+      <VBox alignment="CENTER" layoutX="162.0" layoutY="104.0" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="200.0" spacing="65.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnNewTeacher" mnemonicParsing="false" onAction="#btnNewTeacherOnAction" prefHeight="40.0" prefWidth="165.0" style="-fx-background-color: green; -fx-background-radius: 5;" text="+ NEW TEACHER" textFill="#eee7e7" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="260.0" text="MANAGE TEACHERS" textFill="#3a17d3" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="ID :" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtId" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="370.0" promptText="Generated ID" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="NAME :" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtName" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="370.0" promptText="eg :-Dilan" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="ADDRESS :" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtAddress" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="370.0" promptText="eg :- Rathnapura" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="200.0" spacing="30.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: blue;" text="SAVE" textFill="#f8f5f5" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: red;" text="DELETE" textFill="#ebe7e7" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="283.0" prefWidth="500.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="tblTeachers" maxWidth="1.7976931348623157E308" onKeyReleased="#tblTeacherOnKeyReleased" prefHeight="285.0" prefWidth="473.0" HBox.hgrow="ALWAYS">
+                     <columns>
+                        <TableColumn prefWidth="100.0" text="ID" />
+                        <TableColumn prefWidth="150.0" text="NAME" />
+                        <TableColumn prefWidth="240.0" text="ADDRESS" />
+                     </columns>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
